@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="../js/editar.js" defer ></script>
+    <link href="../output.css" rel="stylesheet">
+    <title>ACMEFilmes-Dashboard</title>
+</head>
+<body class="bg-azul_fundo h-dvh w-dvw">
+    <div class="bg-2A3B68 absolute top-0 left-0 overflow-hidden h-full w-full flex items-center justify-center"
+    id="campoEdicao">
+    <div class="w-2/3 h-2/3 flex flex-col p-8 overflow-hidden bg-azul_fundo ">
+        <button class="flex bg-transparent cursor-pointer" id="fecharcampoEdicao">
+            <img src="../img/sair.png" alt="">
+        </button>
+        <div class="">
+            <h4 class="text-white">Url da capa:</h4>
+            <input type="text" id="fotoCapa" class="w-full">
+        </div>
+        <div class="">
+            <h4 class="text-white">Titulo do filme:</h4>
+            <input type="text" class=" p-2 font-sans w-full" id="tituloFilme">
+        </div>
+        <div class="">
+            <h4 class="text-white">Sinopse:</h4>
+            <textarea class="p-1 font-sans w-full" id="sinopse"></textarea>
+        </div>
+        <div class="">
+            <h4 class="text-white">Duração:</h4>
+            <input class="w-full" type="text" id="tempoDuracao">
+        </div>
+        <div class="">
+            <h4 class="text-white">Data de Lançamento:</h4>
+            <input class="w-full" type="date" id="dataLancamento">
+        </div>
+        <div class="">
+            <h4 class="text-white">Data de Relançamento:</h4>
+            <input class="w-full" type="date" id="dataRelancamento">
+        </div>
+        <div class="">
+            <h4 class="text-white">Valor Unitario:</h4>
+            <input class="w-full" type="text" id="valorUnitario">
+        </div>
+        <div class="">
+            <h4 class="text-white">Id da Classificação:</h4>
+            <input class="w-full" type="number" id="idClassificacao">
+        </div>
+        <div class="">
+            <select name="" id="idGenero">
+                <option value="1">Terror</option>
+                <option value="3">Comédia</option>
+                <option value="4">Aventura</option>
+                <option value="5">Animação</option>
+                <option value="6">Suspense</option>
+                <option value="7">Misterio</option>
+                <option value="8">Fantasia</option>
+                <option value="10">Horror</option>
+            </select>
+        </div>
+        <button class="w-full" id="botaoConfirmarECriar">Confirmar</button>
+    </div>
+</div>
+</body>
+</html>

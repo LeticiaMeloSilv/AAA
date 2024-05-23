@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <script src="./js/login.js" defer></script>
+    <title>ACMEFilmes-Login</title>
+</head>
+<body class="bg-azul_fundo flex justify-center items-center flex-col">
+    <img class="" src="./img/logo.png" alt="">
+    <main class="bg-roxo w-772px h-791px rounded-3xl p-16 flex justify-center flex-col">
+        <h1 class="text-white text-4xl mb-20">Acesse a sua conta</h1>
+        <div class="">
+            <div class="flex gap-3">
+                <img src="./img/Email.png" alt="email">
+                <input class="w-screen bg-transparent placeholder:text-azul_fundo p-3 text-lg border-b-2 outline-none text-white" type="email"
+                    id="email" name="email" placeholder="Seu e-mail aqui">
+            </div>
+            <div class="flex gap-4">
+                <img src="./img/Lock.png" alt="senha">
+                <input class="w-screen bg-transparent placeholder:text-azul_fundo p-3 text-lg border-b-2 outline-none text-white" type="password"
+                    id="senha" name="senha" placeholder="Sua senha">
+            </div>
+        </div>
+        <div class="flex justify-center items-center flex-col mt-10">
+            <button onclick="validarLogin()"
+                class="pointer pt-7 pb-8 pl-20 pr-20 rounded-lg bg-white text-roxo text-2xl font-bold">ENTRAR</button>
+            <a class="underline place-self-end pt-5 pb-7 text-white"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">Esqueci a senha</a>
+            <p class="text-2xl font-sans text-azul_fundo">Ainda não tem uma conta?</p>
+            <a class="text-2xl font-sans text-white"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">Contatar Empresa</a>
+        </div>
+    </main>
+</body>
+
+</html>

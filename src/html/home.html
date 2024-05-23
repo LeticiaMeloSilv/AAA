@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+    <script src="../js/main.js" type="module" defer></script>
+    <title>ACMEFilmes-Dashboard</title>
+</head>
+
+<body class="bg-azul_fundo h-dvh w-dvw">
+    <nav>
+        <div class="flex flex-row items-center justify-between p-6 font-sans">
+            <img class="" src="../img/logo.png" alt="Logo AcmeFilmes">
+            <div class="w-2/12 flex items-center justify-center">
+                <img class="h-14" src="../img/foto-perfil.png" alt="">
+            </div>
+        </div>
+        <hr class="border-1 border-roxo">
+        <input type="search" class="p-2 rounded-full border-none bg-lupa bg-no-repeat w-5/6 mx-32 my-8 bg-right" id="navegar" placeholder="Buscar Filmes..." />
+    </nav>
+    <main class="p-10">
+        <!-- Adicionar Novo Filme -->
+        <button id="btn_adicionar" class="bg-verde p-16">
+            <img src="../img/adicionar.png" alt="">
+        </button>
+        <div class="flex justify-center items-center">
+            <div id="container"
+                class="w-2/3 rounded-md grid grid-cols-10 sm:grid-cols-10 bg-2A3B68 overflow-hidden p-2">
+                <h6 class="col-span-1 text-white self-center justify-self-center">Status</h6>
+                <h6 class="col-span-1 text-white self-center justify-self-center">ID</h6>
+                <h6 class="col-span-4 text-white">Titulo</h6>
+                <h6 class="col-span-2 text-white self-center justify-self-center">Preço</h6>
+                <h6 class="col-span-1 text-white self-center justify-self-center">Editar</h6>
+                <h6 class="col-span-1 text-white self-center justify-self-center">Excluir</h6>
+                <!-- <div class="grid grid-cols-10 col-span-10 p-1 m-1 rounded-full">
+            <div class=" grid grid-cols-10 col-span-10 p-1 m-1 rounded-full bg-white ">
+                    <img class="col-span-1 self-center justify-self-center" src="../img/elevacao.png" alt="">
+                    <h6 class="col-span-1 self-center justify-self-center">5</h6>
+                    <h6 class="col-span-4 self-center">Titulo do filme</h6>
+                    <h6 class="col-span-2 self-center justify-self-center ">R$99,90</h6>
+                    <img class="col-span-1 self-center justify-self-center" src="../img/editar.png" alt="">
+                    <img class="col-span-1 self-center justify-self-center" src="../img/excluir.png" alt="">
+            </div>-->
+            </div>
+        </div>
+        <div id="div_atualizacao" class="w-1/4 bg-azul flex flex-col p-5 h-2/3">
+            <h1 id="h1_atualizacao" class="font-mono text-xl text-white self-center">Ultimas atualizações</h1>
+            <div class="flex justify-between items-center">
+                <img src="../img/foto-perfil.png" alt="">
+                <h4>Titulo do filme</h4>
+                <img src="../img/adicionar.png" alt="">
+            </div>
+            <hr class="bg-verde">
+            <div class="flex justify-between items-center">
+                <img src="../img/foto-perfil.png" alt="">
+                <h4>Titulo do filme</h4>
+                <img src="../img/editar.png" alt="">
+            </div>
+            <hr class="bg-verde">
+            <div class="flex justify-between items-center">
+                <img src="../img/foto-perfil.png" alt="">
+                <h4>Titulo do filme</h4>
+                <img src="../img/excluir.png" alt="">
+            </div>
+            <hr class="bg-verde">
+        </div>
+
+        <div class="bg-2A3B68 absolute top-0 left-0 overflow-hidden h-full w-full flex items-center justify-center hidden"
+            id="campoCriacaoEdicao">
+            <div class="w-2/3 h-2/3 flex flex-col p-8 overflow-hidden bg-azul_fundo ">
+                <button class="flex bg-transparent cursor-pointer" id="fecharcampoCriacaoEdicao"
+                    onclick="fecharcampoCriacaoEdicao()">
+                    <img src="../img/sair.png" alt="">
+                </button>
+                <div class="">
+                    <h4 class="text-white">Url da capa:</h4>
+                    <input type="text" id="fotoCapa" class="w-full">
+                </div>
+                <div class="">
+                    <h4 class="text-white">Titulo do filme:</h4>
+                    <input type="text" class=" p-2 font-sans w-full" id="tituloFilme">
+                </div>
+                <div class="">
+                    <h4 class="text-white">Sinopse:</h4>
+                    <textarea class="p-1 font-sans w-full" id="sinopse"></textarea>
+                </div>
+                <div class="">
+                    <h4 class="text-white">Duração:</h4>
+                    <input class="w-full" type="text" id="tempoDuracao">
+                </div>
+                <div class="">
+                    <h4 class="text-white">Data de Lançamento:</h4>
+                    <input class="w-full" type="date" id="dataLancamento">
+                </div>
+                <div class="">
+                    <h4 class="text-white">Data de Relançamento:</h4>
+                    <input class="w-full" type="date" id="dataRelancamento">
+                </div>
+                <div class="">
+                    <h4 class="text-white">Valor Unitario:</h4>
+                    <input class="w-full" type="text" id="valorUnitario">
+                </div>
+                <div class="">
+                    <h4 class="text-white">Id da Classificação:</h4>
+                    <input class="w-full" type="number" id="idClassificacao">
+                </div>
+                <div class="">
+                    <select name="" id="idGenero">
+                        <option value="1">Terror</option>
+                        <option value="3">Comédia</option>
+                        <option value="4">Aventura</option>
+                        <option value="5">Animação</option>
+                        <option value="6">Suspense</option>
+                        <option value="7">Misterio</option>
+                        <option value="8">Fantasia</option>
+                        <option value="10">Horror</option>
+                    </select>
+                </div>
+                <button class="w-full" id="botaoConfirmarECriar" onclick="adicionarFilme()">Criar</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
